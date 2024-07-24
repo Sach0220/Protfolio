@@ -1,24 +1,14 @@
+/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(to bottom, #f0f4f8, #e2e8f0);
-  transition: background-color 0.3s ease-in-out;
-}
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl;
+  }
 
-a {
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-  color: #1e40af;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  .btn-secondary {
+    @apply px-6 py-3 bg-gray-700 text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl;
+  }
 }

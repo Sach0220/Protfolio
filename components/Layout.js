@@ -1,30 +1,26 @@
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+// components/Layout.js
+import { motion, AnimatePresence } from 'framer-motion';
 
-const Layout = ({ children }) => {
+const variants = {
+  initial: { opacity: 0, y: 50 },
+  enter: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -50 },
+};
+
+const Layout = ({ children, key }) => {
   return (
-    <div>
-      <Head>
-        <title>Cybersecurity Portfolio</title>
-        <meta name="description" content="Portfolio of a Cybersecurity Professional" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <motion.div initial="hidden" animate="visible" variants={{
-        hidden: {
-          opacity: 0,
-          x: -200,
-        },
-        visible: {
-          opacity: 1,
-          x: 0,
-          transition: {
-            duration: 0.5,
-          },
-        },
-      }}>
-        <main>{children}</main>
+    <AnimatePresence>
+      <motion.div
+        key={key}
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ duration: 0.5 }}
+      >
+        {children}
       </motion.div>
-    </div>
+    </AnimatePresence>
   );
 };
 
