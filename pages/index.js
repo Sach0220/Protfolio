@@ -1,5 +1,8 @@
-// pages/index.js
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+import background from '../public/images/hero-bg.jpg'; // Ensure this path is correct
+
 
 export default function Home() {
   return (
@@ -8,14 +11,14 @@ export default function Home() {
         {/* Hero Section */}
         <section id="hero" className="flex items-center justify-center h-screen bg-cover bg-center relative" style={{ backgroundImage: "url('/path-to-your-background-image.jpg')" }}>
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="relative z-10 text-center px-6 md:px-12">
+          <div className="relative z-10 text-left px-6 md:px-12">
             <motion.h1
               className="text-5xl md:text-6xl font-bold leading-tight mb-6"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Welcome to My Cybersecurity Portfolio
+              I am Sachin Prabakar
             </motion.h1>
             <motion.p
               className="text-lg md:text-xl mb-8"
@@ -23,7 +26,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Showcasing my expertise in cybersecurity and related projects.
+              Security Professional
             </motion.p>
             <a href="#about" className="btn-primary">Learn More</a>
           </div>
@@ -41,11 +44,17 @@ export default function Home() {
               About Me
             </motion.h2>
             <p className="text-lg mb-8">
-              I am a dedicated cybersecurity professional with expertise in threat detection, vulnerability management, and incident response. My passion lies in protecting systems and data from malicious attacks and ensuring robust security measures are in place.
+              Dynamic Cyber Security Analyst with 2.5 years of expertise in real-time monitoring, threat analysis, and incident management. Proven track record of enhancing security operations and ensuring system resilience through innovative solutions and global SOC collaboration.
             </p>
-            <p className="text-lg">
-              With a background in various security tools and technologies, I continuously strive to stay updated with the latest trends and advancements in the cybersecurity domain.
+            <p className="text-lg mb-8">
+              With a Master of Engineering in Internetworking from Dalhousie University and a Bachelor of Engineering in Computer Science, I have hands-on experience in network traffic analysis, incident response, and security tools.
             </p>
+            <h3 className="text-xl font-bold mt-4">Education</h3>
+            <p className="text-lg mb-4">Master of Engineering (M. Eng) in Internetworking, Dalhousie University, Halifax, Canada (Sep 2022 - Apr 2024)</p>
+            <p className="text-lg mb-8">Bachelor of Engineering (B. Tech) in Computer Science, Jain University, India (Aug 2016 - Jul 2020)</p>
+            <h3 className="text-xl font-bold mt-4">Work Experience</h3>
+            <p className="text-lg mb-4 font-bold">Senior Cyber Security Analyst, NxtGen Infinite Datacenter & Cloud Technologies, India (Apr 2021 - Aug 2022)</p>
+            <p className="text-lg mb-4 font-bold">Cyber Security Analyst, NxtGen Infinite Datacenter & Cloud Technologies, India (Jul 2020 - Apr 2021)</p>
           </div>
         </section>
         
@@ -72,7 +81,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                 >
-                  Splunk Deployment on AWS
+                  <a href="https://github.com/sachin078/Splunk-deployment-in-aws-using-terraform-and-ansible" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Splunk Deployment on AWS</a>
                 </motion.h3>
                 <p>Automates AWS resource provisioning and Splunk Enterprise installation via Terraform and Ansible.</p>
               </motion.div>
@@ -87,9 +96,9 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                 >
-                  Microsoft Azure Sentinel - Honeypot Deployment
+                  <a href="https://github.com/sachin078/Microsoft-Azure-Azure-Sentinel-SIEM-SOAR-" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Microsoft Azure Sentinel - Honeypot Deployment</a>
                 </motion.h3>
-                <p>Developed PowerShell script for Windows Event Viewer metadata extraction and Azure Sentinel workbook visualization.</p>
+                <p>Using the PowerShell script for Windows Event Viewer metadata extraction and Azure Sentinel workbook visualization.</p>
               </motion.div>
               <motion.div
                 className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl"
@@ -102,7 +111,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                 >
-                  Application Security on Kubernetes
+                  <a href="https://github.com/sachin078/KubeSEC" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Application Security on Kubernetes</a>
                 </motion.h3>
                 <p>Orchestrated the integration of a WAF-based Ingress controller to fortify security for web applications on Kubernetes.</p>
               </motion.div>

@@ -12,3 +12,28 @@
     @apply px-6 py-3 bg-gray-700 text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a202c;
+}
+
+.bg-hero-pattern {
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.transition-shadow {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.transition-shadow:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

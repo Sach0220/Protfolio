@@ -1,26 +1,27 @@
-// components/Layout.js
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
-const variants = {
-  initial: { opacity: 0, y: 50 },
-  enter: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -50 },
-};
-
-const Layout = ({ children, key }) => {
+const Layout = ({ children }) => {
   return (
-    <AnimatePresence>
-      <motion.div
-        key={key}
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={variants}
+    <div>
+      <header className="bg-gray-900 text-white p-4">
+        <nav className="container mx-auto flex justify-between items-center">
+          <Link href="#about"><a className="text-lg font-bold hover:text-secondary">About</a></Link>
+          <Link href="#projects"><a className="text-lg font-bold hover:text-secondary">Projects</a></Link>
+          <Link href="#contact"><a className="text-lg font-bold hover:text-secondary">Contact</a></Link>
+        </nav>
+      </header>
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         {children}
-      </motion.div>
-    </AnimatePresence>
+      </motion.main>
+      <footer className="bg-gray-900 text-white p-4 text-center">
+        <p>© 2024 Sachin Prabakar. All rights reserved.</p>
+      </footer>
+    </div>
   );
 };
 
