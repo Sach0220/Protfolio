@@ -5,5 +5,20 @@
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background-color: #f7f7f7;
+  background: linear-gradient(to bottom, #f0f4f8, #e2e8f0);
+  transition: background-color 0.3s ease-in-out;
+}
+
+a {
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 text-white p-4 shadow-lg">
-      <nav className="container mx-auto flex justify-between items-center">
+    <header className="fixed top-0 left-0 w-full bg-cover bg-center text-white py-4 shadow-lg" style={{ backgroundImage: 'url("/images/header-bg.jpg")' }}>
+      <nav className="container flex justify-between items-center">
         <h1 className="text-3xl font-bold">
           <Link href="/">Cybersecurity Portfolio</Link>
         </h1>

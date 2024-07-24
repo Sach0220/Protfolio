@@ -30,7 +30,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-md"
+            className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
