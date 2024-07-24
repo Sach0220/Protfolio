@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import background from '../public/images/hero-bg.jpg'; // Ensure this path is correct
+import background from '../public/images/hero-bg.jpeg'; // Ensure this path is correct
 
 
 export default function Home() {
